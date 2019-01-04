@@ -1345,7 +1345,7 @@ footer {
 p.copy-right-grids {
     letter-spacing: 2px;
     font-size: 15px;
-    color: #77828a;
+    color: #fff;
 }
 
 p.copy-right-grids a {
@@ -1587,6 +1587,7 @@ h1.logo{
     }
     .baner-info-w3layouts h3 {
         font-size: 2.4em;
+        margin-top: 80px;
     }
     .baner-info-w3layouts {
         padding: 7em 0 0;
