@@ -1,0 +1,726 @@
+
+/* ---------------------------------------------- variables ------------------------------------------------- */
+
+$black: #141414
+$pink: #EC407A
+$pink1: #F0598C
+$blue: #2196F3
+$blue1: #597DF0
+$blue2: #50B0E8
+$orangeyellow: #FF9802
+$bluegrey: #F1F4F6
+$yellow: #FFF355
+
+
+/* ---------------------------------------------- Global ------------------------------------------------- */
+
+*
+	box-sizing: border-box
+
+html
+	font-size: 14px
+	margin: 0
+	padding: 0
+
+body
+	font-family: 'Open Sans', sans-serif
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+
+
+/* ---------------------------------------------- Home ------------------------------------------------- */
+
+.home
+	position: relative	
+	overflow: hidden
+	padding-bottom: 100px
+
+.background
+	img
+		transform: scale(0.8)
+		position: absolute
+		z-index: -10
+	.pink-triangle
+		left: 5%
+		top: 5%
+	.yellow-strip
+		top: -80px	
+		left: 50%
+		transform: scale(0.6)
+	.blue-triangle
+		right: 5%
+		top: 15%
+		transform: scale(0.7)
+	.pink-strip
+		right: -130px	
+		bottom: -50px
+		transform: scale(0.6)
+
+nav
+	ul
+		list-style: none
+		text-align: right
+		padding-right: 20px	
+		li
+			display: inline-block
+			a
+				display: block
+				text-decoration: none
+				color: $black
+				font-size: 1rem
+				font-weight: 600
+				padding: 5px 15px
+			a:hover
+				color: $pink
+			#register-nav
+				border: 1px solid $pink
+				&:hover
+					background: $pink
+					color: white
+	.menu
+		display: none
+
+.hero
+	margin: 0 20%
+	padding-top: 30px
+	position: relative
+	.grid-pattern
+		position: absolute
+		z-index: -10
+		left: -20%
+		top: -20px
+		transform: scale(0.9)
+	.hero-contents
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.hero-main-content
+			.ca
+				margin-bottom: 50px
+				img
+					width: 35%
+				h3
+					font-weight: 400
+			.main-text	
+				display: flex
+				alig
+				.days
+					text-align: center
+					margin-right: 30px
+					h1	
+						font-size: 6em
+						margin-top: 0px
+						margin-bottom: 0px
+						font-weight: 600
+						color: $pink
+					h2
+						font-size: 1.4rem
+						margin-top: -12px
+				.workshop
+					h1
+						font-size: 2.4rem
+						font-weight: 600
+						margin-top: 12px
+						span
+							color: $blue
+			.mobile10x
+				margin-top: 70px
+				h3
+					font-weight: 400
+				img
+					width: 40%
+
+		.android-illustration
+			img
+				transform: scale(0.9)
+
+.event-info
+	position: relative
+	.info-card
+		margin: 0 auto
+		background: white
+		width: 40%
+		padding: 2%
+		padding-right: 20%
+		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		position: relative
+		.date, .venue, .time
+			margin-bottom: 30px
+			h2
+				font-size: 1.3rem
+				color: $pink
+				margin-bottom: 0px
+			h3
+				margin-top: 5px
+				span
+					font-weight: 400
+		h3.text
+			font-weight: 400
+			span
+				color: $blue
+				font-weight: 600
+		.free-panel
+			background: $orangeyellow
+			-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+			-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+			box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+			position: absolute
+			bottom: -50px
+			right: -50px
+			z-index: 100
+			padding: 20px 15%
+			text-align: center
+			color: white
+			padding-bottom: 80px
+			h1
+				font-size: 4rem
+				font-weight: 500
+				position: relative
+				span
+					font-size: 1.2rem
+					position: absolute
+					top: 5px
+					right: -10px
+	.background
+		width: 100%
+		height: 75%
+		z-index: -10
+		background: $bluegrey
+		position: absolute
+		bottom: -100px
+
+.objectives
+	display: flex
+	margin-top: 250px
+	position: relative
+	h1
+		width: 30%
+		font-size: 4rem
+		font-weight: 600
+		text-align: right
+		padding-right: 2%
+	.content-card
+		width: 70%
+		background: $pink1
+		color: white
+		padding: 2% 5%
+		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		transform: translate(100px)
+		opacity: 0
+		transition: all 1s ease-out
+		ul
+			li
+				font-size: 1.4rem
+				margin-bottom: 10px
+	.content-card.show
+		transform: translate(0)
+		opacity: 1
+	.square-background
+		background: $bluegrey
+		width: 25%
+		height: 70%
+		position: absolute
+		left: 15%
+		top: -10%
+		z-index: -10
+	.pink-grid
+		position: absolute
+		left: 100px
+		top: 30px
+		transform: scale(0.65)
+
+.day-plan
+	display: flex
+	margin-top: 200px
+	position: relative
+	h1
+		width: 40%
+		font-size: 4rem
+		font-weight: 600
+		text-align: left
+		padding-left: 2%
+	.content-card
+		width: 60%
+		background: $blue1
+		color: white
+		padding: 2% 6%
+		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		transform: translate(-100px)
+		opacity: 0
+		transition: all 1s ease-out
+		.day
+			margin: 30px 0px
+			.day-name
+				color: $yellow
+				font-size: 1.4rem
+				margin-bottom: 0px
+				position: relative	
+			.day-name::after
+				content: ''
+				width: 26px 
+				height: 26px
+				position: absolute	
+				right: 0px
+				top: 0px
+				background-image: url('../images/white-plus.png') 
+				background-size: cover
+				background-repeat: no repeat
+				padding: 1px
+				cursor: pointer
+				z-index: 200
+			.day-name.hidden::after
+				display: none
+			.day-name::before
+				content: ''
+				width: 26px 
+				height: 26px
+				position: absolute	
+				right: 0px
+				top: 0px
+				background-image: url('../images/white-minus.png') 
+				background-size: cover
+				background-repeat: no repeat
+				padding: 1px
+				cursor: pointer
+				z-index: 200
+			.day-name.hidden1::before
+				display: none
+
+			.plan
+				font-weight: 400
+				font-size: 1.4rem
+				color: white
+				margin-top: 0px
+				margin-bottom: 0px
+			.plan.hide
+				display: none
+			.detailed-plan
+				display: none
+				h3
+					margin-top: 2px
+					font-size: 1.4rem
+					font-weight: 600
+					margin-bottom: 0
+				h4
+					font-size: 1.3rem
+					font-weight: 400
+					margin-top: 0
+			.detailed-plan.show	
+				display: block
+	.content-card.show
+		transform: translate(0)
+		opacity: 1
+	.square-background
+		background: $bluegrey
+		width: 25%
+		height: 70%
+		position: absolute
+		right: 25%
+		top: -10%
+		z-index: -10
+	.blue-grid
+		position: absolute
+		right: 100px
+		top: 10px
+		transform: scale(0.65)
+		z-index: -10
+
+.partners
+	margin-top: 150px
+	position: relative
+	.heading
+		position: relative
+		h1
+			font-size: 4rem
+			font-weight: 600
+			text-align: left
+			padding-left: 4%
+			margin-bottom: 100px
+		.square-background
+			background: $bluegrey
+			width: 250px
+			height: 120px
+			position: absolute
+			left: 7%
+			top: 0
+			z-index: -10
+	.partner-logos
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 0 10%
+		.logo
+			margin: 0 4%
+			img
+				width: 100%
+				filter: brightness(0)	
+				opacity: 0.5	
+				transition: 0.3s all ease
+				&:hover
+					filter: brightness(1)
+					opacity: 1
+	.yellow-strip
+		overflow: hidden
+		position: absolute
+		right: 0
+		top: -150px
+		z-index: -20
+		img	
+			float: right
+			transform: translate(120px,0) scale(0.7)
+	.pink-strip
+		overflow: hidden
+		position: absolute
+		left: 0
+		bottom: -350px
+		z-index: -20
+		img
+			float: left
+			transform: translate(-120px,0) scale(0.7)
+
+.register
+	margin-top: 150px
+	.heading
+		position: relative
+		h1
+			font-size: 4rem
+			font-weight: 600
+			text-align: right
+			padding-right: 4%
+			margin-bottom: 100px
+		.square-background
+			background: $bluegrey
+			width: 250px
+			height: 120px
+			position: absolute
+			right: 7%
+			top: 0
+			z-index: -10
+	.terms-card
+		margin-bottom: 100px
+		width: 80%
+		margin-left: 20%
+		background: $blue2
+		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		color: white
+		padding: 2% 5%
+		transform: translate(100px)
+		opacity: 0
+		transition: all 1s ease-out
+		h1
+			font-size: 2rem
+			position: relative
+			margin-left: 20px
+			span
+				position: absolute
+				top: 0
+				left: -20px
+				font-size: 1.4rem
+		ul
+			li
+				font-size: 1.4rem
+				margin: 20px 0px
+	.terms-card.show
+		transform: translate(0)
+		opacity: 1
+
+	h3
+		display: block
+		text-align: center
+		font-weight: 600
+		font-size: 1.3rem
+		margin-bottom: 50px
+	button
+		display: block
+		margin: 0 auto
+		padding: 20px 50px
+		border-radius: 7px
+		border: none
+		color: white
+		background: $pink1
+		font-size: 1.6rem
+		-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.16)
+		cursor: pointer
+		outline: none
+		transition: all 0.4s ease
+		&:hover
+			background: $pink
+			transform: translate(0, -2px)
+			-webkit-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16)
+			-moz-box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16)
+			box-shadow: 0px 3px 20px 0px rgba(0,0,0,0.16)
+
+.contacts
+	margin-top: 100px
+	background: $bluegrey
+	padding: 3% 10%
+	padding-bottom: 10px
+	position: relative	
+	display: flex
+	justify-content: space-between
+	overflow: hidden
+	.contact-details
+		h3
+			font-weight: 400
+		h4
+			margin-top: 50px
+		
+	.social-media
+		h1
+			text-align: right
+		.icons
+			display: flex
+			position: relative
+			z-index: 10
+			a
+				margin: 10px
+				filter: brightness(0)
+				opacity: 0.7
+				&:hover
+					filter: brightness(1)
+					opacity: 1
+	.androids
+		position: absolute	
+		height: 90%
+		left: 40%
+		bottom: 0px
+		z-index: 0
+
+
+
+
+
+/* ---------------------------------------------------- media-queries -------------------------------------------------- */
+
+
+@media(max-width: 736px)
+	nav .nav-items
+		display: none	
+	nav .menu
+		display: block
+		z-index: 500
+		.menu-icon
+			width: 40px
+			float: right
+			margin: 20px
+			cursor: pointer
+			z-index: 200
+		ul
+			padding-top: 80px
+			li
+				display: block
+				background: $bluegrey
+				a
+					padding-right: 8px
+					padding-top: 10px
+					padding-bottom: 10px
+					border-bottom: 1px solid white
+		ul.nav-list.selected
+			display: block
+		ul.nav-list
+			display: none
+			margin-top: 0
+
+
+@media(max-width: 1100px)
+	.objectives, .day-plan
+		h1
+			font-size: 3rem
+	.partners, .register
+		.heading h1
+			font-size: 3rem
+	.objectives
+		justify-content: space-between
+		h1
+			width: 40%
+		.content-card
+			width: 60%
+		.square-background
+			left: 25%
+	.contacts
+		.androids
+			opacity: 0.5
+
+
+@media(max-width: 1000px)
+	.event-info .info-card
+		width: 60%
+		.free-panel
+			padding: 20px 10%
+
+@media(max-width: 736px)
+	html
+		font-size: 13px
+	.hero
+		margin: 0 10%
+		.hero-contents .android-illustration img
+			transform: scale(0.6)
+	.background
+		.pink-triangle, .blue-triangle, .pink-strip, .yellow-strip
+			transform: scale(0.3)
+		.pink-strip
+			right: -160px
+		.yellow-strip
+			top: -110px
+	.partners 
+		.partner-logos
+			flex-wrap: wrap
+		.logo			
+			width: 30%
+			margin-bottom: 20px
+		.yellow-strip img
+			transform: translate(160px) scale(0.3)
+		.pink-strip img
+			transform: translate(-160px, -100px) scale(0.3)
+
+
+
+@media(max-width: 670px)
+	.objectives
+		flex-wrap: wrap
+		.content-card
+			width: 80%
+			margin-left: 20%
+		.square-background
+			width: 40%
+			top: -5%
+		.pink-grid
+			left: 30px
+			top: -30px
+	.day-plan
+		flex-direction: column
+		h1
+			order: 1
+			text-align: right
+			width: 80%
+		.content-card
+			order: 2
+			width: 80%
+		.square-background
+			right: 30%
+			top: -5%
+			width: 40%
+		.blue-grid
+			right: 20px
+			top: -100px
+	.contacts
+		.social-media
+			.icons
+				a img
+					width: 40px
+
+
+@media(max-width: 550px)
+	html
+		font-size: 12px
+	.hero
+		margin-top: 50px
+	.hero .hero-contents .hero-main-content 
+		.main-text
+			transform: scale(0.8)
+			transform-origin: top left
+		.mobile10x
+			margin-top: 40px
+	.objectives
+		h1
+			width: 100%
+			margin-left: 10%
+			text-align: left
+		.pink-grid
+			left: -10px
+			top: -40px
+	.day-plan
+		.blue-grid
+			right: -10px
+	.contacts
+		.androids
+			opacity: 0.5
+		.social-media
+			h1
+				text-align: center
+			.icons
+				flex-direction: column
+				align-items: center
+				a
+					margin: 0px
+		.contact-details
+			h4
+				margin-top: 110px
+
+
+@media(max-width: 450px)
+	html
+		overflow-x: hidden
+	.hero 
+		.hero-contents
+			.android-illustration
+				width: 50%
+				img
+					transform: scale(0.5)
+			.hero-main-content
+				width: 50%
+				.main-text .days
+					margin-right: 10px
+				.ca img
+					width: 50%
+				.mobile10x	img
+					width: 60%
+
+		.grid-pattern
+			left: -50%
+			top: -130px
+			transform: scale(0.6)
+	.background
+		.yellow-strip
+			display: none
+	.event-info .info-card
+		width: 75%
+		padding-right: 30%
+		.date, .time, .venue
+			margin-bottom: 15px
+	.objectives
+		margin-top: 150px
+		.square-background
+			top: 0px
+	.day-plan
+		margin-top: 100px
+		.square-background
+			top: 0px
+	.partners
+		margin-top: 100px
+		.heading
+			h1
+				margin-bottom: 70px
+			.square-background
+				width: 150px
+				height: 80px
+				left: 20%
+		.partner-logos
+			.logo
+				width: 40%
+				margin-bottom: 30px
+	.register
+		margin-top: 100px
+		.heading
+			h1
+				margin-bottom: 70px
+			.square-background
+				width: 150px
+				height: 80px
+				right: 20%
+		.terms-card
+			margin-bottom: 70px
+
+
+
